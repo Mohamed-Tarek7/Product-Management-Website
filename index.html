@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product Storage</title>
+        <link rel = "stylesheet" href = "css/bootstrap.min.css"/>
+        <link rel = "stylesheet" href = "css/style.css"/>
+    </head>
+    <body>
+        <div class="main vh-100 overflow-auto">
+            <div class="container my-5">
+                <h1 class = "text-center text-white"> Product Storage </h1>
+                <div class="my-4 text-dark fw-medium">
+                    <label for = "productName" class = "mb-2"> Product Name </label>
+                    <input id = "productName" class = "form-control" type = "name" placeholder="Product Name"/>
+                </div>
+
+                <div class="my-4 text-dark fw-medium">
+                    <label for = "productPrice" class = "mb-2"> Product Price </label>
+                    <input id = "productPrice" class = "form-control" type = "name" placeholder="Product Price"/>
+                </div>
+
+                <div class="my-4 text-dark fw-medium">
+                    <label for = "productCategory" class = "mb-2"> Product Category </label>
+                    <input id = "productCategory" class = "form-control" type = "name" placeholder="Product Category"/>
+                </div>
+
+                <div class="my-4 text-dark fw-medium">
+                    <label for = "productDescription" class = "mb-2"> Product Description </label>
+                    <input id = "productDescription" class = "form-control" type = "name" placeholder="Product Description"/>
+                 </div>
+
+                 <div class="d-flex justify-content-between">
+                    <button id = "addBtn" type="submit" class="inputButtons shadow btn btn-outline-dark bg-dark rounded-5 my-2 ms-2 fw-medium text-white" onclick="addProduct();">Add Product</button>
+                    <button type="submit" class="inputButtons shadow btn btn-outline-danger bg-danger rounded-5 my-2 ms-2 fw-medium text-white" onclick="clearProducts();">Clear Products</button>
+                 </div>
+            </div>
+
+            <div class = "w-25 mx-auto mb-5 fw-medium">
+                <label for = "productSearch" class = "text-dark mb-2 mt-4"> Search Product </label>
+                <input id = "productSearch" class = "form-control" type = "name" placeholder="Search Product" oninput="searchProducts();"/>
+            </div>
+
+            <table class = "table table-striped table-dark w-50 mx-auto text-center fw-medium">
+                <thead>
+                    <tr>
+                        <td> # </td>
+                        <td> Name </td>
+                        <td> Price </td>
+                        <td> Category </td>
+                        <td> Description </td>
+                        <td> Delete </td>
+                        <td> Update </td>
+                    </tr>
+                </thead>
+
+                <tbody id = "tableBody">
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <script src = "js/index.js"> </script>
+    </body>
+</html>
